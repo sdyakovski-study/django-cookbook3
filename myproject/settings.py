@@ -129,3 +129,10 @@ TEMPLATE_DIRS = (
 
 # File Upload Temp location
 FILE_UPLOAD_TEMP_DIR = os.path.join(PROJECT_PATH, 'tmp')
+
+# Add here the locally diverse settings
+try:
+    execfile(os.path.join(os.path.dirname(__file__),
+        "local_settings.py"))
+except IOError:
+    pass

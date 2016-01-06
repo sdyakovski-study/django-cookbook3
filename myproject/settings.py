@@ -101,7 +101,10 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
 
-STATIC_URL = '/static/'
+from utils.misc import get_git_changeset
+
+STATIC_URL = '/static/%s/' % get_git_changeset(BASE_PATH)
+print STATIC_URL
 
 LOCALE_PATHS = (
     os.path.join(BASE_PATH, 'locale'),
@@ -124,4 +127,4 @@ TEMPLATE_DIRS = (
 )
 
 # File Upload Temp location
-FILE_UPLOAD_TEMP_DIR = os.path.join(PROJECT_PATH, 'tmp')33
+FILE_UPLOAD_TEMP_DIR = os.path.join(PROJECT_PATH, 'tmp')

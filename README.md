@@ -1,6 +1,6 @@
 Following "Web Development with Django Cookbook" recepes.
 I changed the project structure a bit compared to the one suggested in the book:
-- Instead of creating the virtualenv in ., I created it in env
+- Instead of creating the virtualenv in ., I created it in django-cookbook3-env:
    $ virtualenv django-cookbook3-env
    $ source django-cookbook3-env/bin/activate
 - So instead of getting bin, include, lib etc. directly in the django-cookbook3 folder, I have in there an django-cookbook3-env folder, and these are inside
